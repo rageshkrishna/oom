@@ -11,4 +11,4 @@ build:
   ci:
     - apt-get update
     - apt-get install stress
-    - stress -m 5 --vm-bytes 1024M
+    - stress -m 10 --vm-bytes 1024M
