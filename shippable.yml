@@ -1,0 +1,14 @@
+language: python
+
+python:
+  - 2.7
+
+build:
+  pre_ci_boot:
+    image_name: drydock/u14
+    image_tag: prod
+    
+  ci:
+    - apt-get update
+    - apt-get install stress
+    - stress -m 5 --vm-bytes 1024M
